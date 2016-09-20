@@ -1,0 +1,76 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a [routerLink]=" ['./'] " class="navbar-brand">
+        Toppers Tips
+      </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <a [routerLink]=" ['./home'] " class="btn">
+          Home
+        </a>
+      </li>
+      <li>
+        <a [routerLink]=" ['./detail'] " class="btn">
+          Detail
+        </a>
+      </li>
+      <li>
+        <a [routerLink]=" ['./about'] " class="btn">
+          About
+        </a>
+      </li>
+      <li>
+        <a [routerLink]=" ['./contactus'] " class="btn">
+          Contact Us
+        </a>
+      </li>
+      <li>
+        <button class="btn btn-primary btn-margin" (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</button>
+      </li>
+      <li>
+        <button class="btn btn-primary btn-margin" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+
+<main>
+  <!-- <img src="assets/img/images.jpg" class="bg"> -->
+  <router-outlet></router-outlet>
+</main>
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <h4>Company</h4> <br/> <br/>
+        <a [routerLink]=" ['./aboutus'] ">About Us </a><br/>
+        <a [routerLink]=" ['./aboutus'] ">Blog </a><br/>
+        <a [routerLink]=" ['./aboutus'] ">News </a><br/>
+        <a [routerLink]=" ['./aboutus'] ">Press Releases </a><br/>
+        <a [routerLink]=" ['./aboutus'] ">Jobs </a><br/>
+        <a [routerLink]=" ['./aboutus'] ">Contact Us </a><br/>
+      </div>
+      <div class="col-xs-6">
+        <h4>Connect With Us</h4> <br/> <br/>
+        <!-- Place this tag where you want the widget to render. -->
+        <div class="g-follow" data-annotation="bubble" data-height="20" data-rel="publisher"></div> <br/>
+        <div class="fb-follow" data-href="https://www.facebook.com/topperstips.original" data-layout="standard" data-size="small" data-show-faces="true"></div> <br/>
+        LinkedIn <br/>
+        Twitter <br/>
+        Youtube <br/>
+        Contact Us <br/></div>
+    </div>
+    <div class="row">
+      <span>
+        All rights reserved. ToppersTips.<span class="glyphicon glyphicon-copyright-mark"></span>2016.
+      </span>
+    </div>
+  </div>
+
+
+</footer>
